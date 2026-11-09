@@ -67,6 +67,10 @@ test("Vercel Express entry point exposes the health endpoint", async (context) =
   const { server, baseUrl } = await startTestServer(app);
   context.after(() => new Promise((resolve) => server.close(resolve)));
 
+  const homeResponse = await fetch(baseUrl, { redirect: "manual" });
+  assert.equal(homeResponse.status, 302);
+  assert.equal(homeResponse.headers.get("location"), "/index.html");
+
   const response = await fetch(`${baseUrl}/api/health`);
   assert.equal(response.status, 200);
   assert.deepEqual(await response.json(), { status: "ok" });

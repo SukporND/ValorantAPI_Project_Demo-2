@@ -91,7 +91,7 @@ Express จำกัด resource ที่อนุญาตไว้ที่ `
 
 ## Deploy บน Vercel
 
-Repo นี้เตรียม Express entry point ที่ root (`index.js`) และ Vite build output ใน `public/` สำหรับ Vercel:
+Repo นี้เตรียม Express entry point ที่ root (`index.js`), Vite build output ใน `public/` และ redirect หน้า `/` ไปยังไฟล์ static สำหรับ Vercel:
 
 1. Import GitHub repository เข้า Vercel
 2. ใช้ Root Directory เป็น `./`

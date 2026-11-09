@@ -24,6 +24,10 @@ function createApiApp({
   const app = express();
   const resourceCache = new Map();
 
+  app.get("/", (_req, res) => {
+    res.redirect(302, "/index.html");
+  });
+
   app.get("/api/health", (_req, res) => {
     res.json({ status: "ok" });
   });
