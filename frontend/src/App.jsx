@@ -10,6 +10,7 @@ const COPY = {
     heroEyebrow: 'VALORANT API EXPLORER', heroTitleA: 'Know the game.', heroTitleB: 'Own the meta.',
     heroDescription: 'Explore every Agent, weapon, skin and map. Then craft a loadout that feels like yours.',
     exploreDatabase: 'EXPLORE THE DATABASE', poweredBy: 'Powered by the community VALORANT API',
+    officialReference: 'Visit the official VALORANT website', educationalNote: 'For educational use only.',
     nextMatch: 'YOUR NEXT MATCH', archive: 'THE ARCHIVE', archiveTitleA: 'Game data,', archiveTitleB: 'unlocked.',
     archiveDescription: 'Browse live data straight from the public VALORANT API.',
     heroPreview: 'Your current loadout preview', agentRole: 'AGENT ROLE', selected: 'SELECTED',
@@ -17,10 +18,11 @@ const COPY = {
     primaryStat: 'PRIMARY WEAPON', favoriteMapStat: 'FAVORITE MAP', damageRanges: 'DAMAGE BY RANGE',
     head: 'Head', body: 'Body', leg: 'Leg', noAbilityDescription: 'No description available.',
     categoryAll: 'Everything', categoryAgents: 'Agents', categoryWeapons: 'Weapons', categorySkins: 'Weapon skins', categoryMaps: 'Maps',
-    skinCount: 'skins', skinsInPopup: 'WEAPON SKINS', selectSkin: 'Select a skin to preview it.', noSkins: 'No skins available for this weapon.',
+    skinCount: 'skins', skinsInPopup: 'WEAPON SKINS', searchSkins: 'Search weapon skins...', selectSkin: 'Select a skin to preview it.', noSkins: 'No skins available for this weapon.',
     searchPlaceholder: 'Search Agents, weapons, skins, maps...', sort: 'SORT',
     loading: 'Loading VALORANT game data…', retry: 'TRY AGAIN ↻', couldNotLoad: 'Couldn’t load game data.',
     clickDetails: 'Click a card for details', items: 'ITEMS', browseSkins: 'BROWSE ALL WEAPON SKINS ↗',
+    searchPicker: 'Search in this list...', dismiss: 'Dismiss notification',
     noResults: 'No game data matches your search.', noItems: 'No items match your search.',
     emptyData: 'The API returned no game data. Try again later.',
     personalArmory: 'YOUR PERSONAL ARMORY', buildLoadoutA: 'Build your', buildLoadoutB: 'loadout.',
@@ -43,6 +45,7 @@ const COPY = {
     heroEyebrow: 'สำรวจข้อมูล VALORANT API', heroTitleA: 'รู้จักทุกข้อมูล', heroTitleB: 'เล่นให้เหนือกว่า',
     heroDescription: 'สำรวจเอเจนต์ อาวุธ สกิน และแผนที่ แล้วจัดชุดอุปกรณ์ในแบบของคุณ',
     exploreDatabase: 'สำรวจฐานข้อมูล', poweredBy: 'ขับเคลื่อนด้วย VALORANT API จากชุมชน',
+    officialReference: 'ไปยังเว็บไซต์ทางการของ VALORANT', educationalNote: 'จัดทำเพื่อการศึกษาเท่านั้น',
     nextMatch: 'แมตช์ถัดไปของคุณ', archive: 'คลังข้อมูล', archiveTitleA: 'ปลดล็อก', archiveTitleB: 'ข้อมูลเกม',
     archiveDescription: 'เรียกดูข้อมูลเกมล่าสุดจาก VALORANT API สาธารณะ',
     heroPreview: 'ตัวอย่างชุดอุปกรณ์ปัจจุบัน', agentRole: 'ตำแหน่งเอเจนต์', selected: 'เลือกแล้ว',
@@ -50,10 +53,11 @@ const COPY = {
     primaryStat: 'อาวุธหลัก', favoriteMapStat: 'แผนที่โปรด', damageRanges: 'ความเสียหายตามระยะ',
     head: 'หัว', body: 'ลำตัว', leg: 'ขา', noAbilityDescription: 'ไม่มีคำอธิบาย',
     categoryAll: 'ทั้งหมด', categoryAgents: 'เอเจนต์', categoryWeapons: 'อาวุธ', categorySkins: 'สกินอาวุธ', categoryMaps: 'แผนที่',
-    skinCount: 'สกิน', skinsInPopup: 'สกินอาวุธ', selectSkin: 'เลือกสกินเพื่อดูตัวอย่าง', noSkins: 'ไม่มีสกินสำหรับอาวุธนี้',
+    skinCount: 'สกิน', skinsInPopup: 'สกินอาวุธ', searchSkins: 'ค้นหาสกินอาวุธ...', selectSkin: 'เลือกสกินเพื่อดูตัวอย่าง', noSkins: 'ไม่มีสกินสำหรับอาวุธนี้',
     searchPlaceholder: 'ค้นหาเอเจนต์ อาวุธ สกิน หรือแผนที่...', sort: 'เรียงตาม',
     loading: 'กำลังโหลดข้อมูล VALORANT…', retry: 'ลองอีกครั้ง ↻', couldNotLoad: 'โหลดข้อมูลเกมไม่สำเร็จ',
     clickDetails: 'กดการ์ดเพื่อดูรายละเอียด', items: 'รายการ', browseSkins: 'ดูสกินอาวุธทั้งหมด ↗',
+    searchPicker: 'ค้นหาในรายการนี้...', dismiss: 'ปิดข้อความแจ้งเตือน',
     noResults: 'ไม่พบข้อมูลที่ตรงกับคำค้นหา', noItems: 'ไม่พบรายการที่ตรงกับคำค้นหา',
     emptyData: 'API ไม่พบข้อมูลเกมในขณะนี้ โปรดลองอีกครั้งภายหลัง',
     personalArmory: 'คลังอุปกรณ์ส่วนตัว', buildLoadoutA: 'จัดชุด', buildLoadoutB: 'อุปกรณ์',
@@ -72,6 +76,7 @@ const COPY = {
     nameDesc: 'ชื่อ · ฮ–ก', uuidAsc: 'UUID · A–Z', browseData: 'รายการ',
   },
 }
+// ตัวเลือกหมวดหมู่และตัวเลือกการค้นหา
 const CATEGORIES = [
   { id: 'all', label: 'Everything', icon: '✦' },
   { id: 'agent', label: 'Agents', icon: '🎭' },
@@ -297,7 +302,7 @@ function DataCard({ category, item, onClick, selected = false, language = 'en', 
     </button>
   )
 }
-
+// status panel for loading and error states
 function RequestStatus({ loading, error, loadingLabel, text, onRetry }) {
   if (loading) {
     return <div className="status-panel"><span className="loader" /> {text(loadingLabel)}</div>
@@ -343,7 +348,7 @@ function ExplorerResults({ groups, category, language, text, hasData, onSelect }
     </>
   )
 }
-
+// UX
 function App() {
   const [language, setLanguage] = useState('en')
   const text = (key) => COPY[language][key]
@@ -360,13 +365,20 @@ function App() {
   const [details, setDetails] = useState(null)
   const [activeAbility, setActiveAbility] = useState(null)
   const [activeSkinPreview, setActiveSkinPreview] = useState(null)
+  const [weaponSkinSearch, setWeaponSkinSearch] = useState('')
   const [picker, setPicker] = useState('')
   const [pickerSearch, setPickerSearch] = useState('')
-  const [savedMessage, setSavedMessage] = useState('')
+  const [saveFeedback, setSaveFeedback] = useState(null)
 
   useEffect(() => {
     document.documentElement.lang = language
   }, [language])
+
+  useEffect(() => {
+    if (!saveFeedback) return undefined
+    const timeoutId = window.setTimeout(() => setSaveFeedback(null), 4000)
+    return () => window.clearTimeout(timeoutId)
+  }, [saveFeedback])
 
   useEffect(() => {
     const controller = new AbortController()
@@ -446,6 +458,7 @@ function App() {
   }).filter((group) => group.items.length), [data, normalizedSearch, sort, visibleCategories])
   const detailWeaponSkins = details?.category === 'weapon'
     ? sortItems(data.indexes.skinsByWeaponName.get(details.item.displayName) || [], 'skin', 'name-asc')
+      .filter((skin) => `${skin.displayName} ${getSummary('skin', skin)}`.toLocaleLowerCase().includes(weaponSkinSearch.trim().toLocaleLowerCase()))
     : []
 
   const pickerConfig = PICKERS.find((entry) => entry.id === picker)
@@ -497,7 +510,7 @@ function App() {
     setPicker('')
     setPickerSearch('')
   }
-
+// บันทึกชุดอุปกรณ์ใน localStorage ของเบราว์เซอร์
   function saveLoadout() {
     try {
       const snapshot = Object.fromEntries([
@@ -505,10 +518,10 @@ function App() {
         ['meleeSkin', selection.meleeSkin?.uuid || null],
       ])
       localStorage.setItem(LOADOUT_STORAGE_KEY, JSON.stringify(snapshot))
-      setSavedMessage(text('saved'))
+      setSaveFeedback({ type: 'success', message: text('saved') })
     } catch (saveError) {
       console.error('Unable to save loadout:', saveError)
-      setSavedMessage(text('saveError'))
+      setSaveFeedback({ type: 'error', message: text('saveError') })
     }
   }
 
@@ -547,6 +560,12 @@ function App() {
                 {text('exploreDatabase')} <span>↘</span>
               </button>
               <div className="hero-note"><span>↳</span> {text('poweredBy')}</div>
+              <div className="official-reference">
+                <a href="https://playvalorant.com/th-th/agents/" target="_blank" rel="noreferrer">
+                  {text('officialReference')} ↗
+                </a>
+                <span>{text('educationalNote')}</span>
+              </div>
             </div>
             <div className="hero-art" aria-label={text('heroPreview')}>
               <div className="hero-art-top"><span>{text('nextMatch')}</span><span>✦ 2026</span></div>
@@ -606,6 +625,7 @@ function App() {
                 hasData={Boolean(data.agent.length || data.weapon.length || data.skin.length || data.map.length)}
                 onSelect={(selectedCategory, item) => {
                   setDetails({ category: selectedCategory, item })
+                  setWeaponSkinSearch('')
                   setActiveAbility(selectedCategory === 'agent'
                     ? (item.abilities || []).find((ability) => ability.displayName) || null
                     : null)
@@ -634,15 +654,16 @@ function App() {
             <div className="builder-layout">
               <section className="builder-picks">
                 <div className="builder-panel-heading"><span>{text('selectGear')}</span><strong>{PICKERS.filter((entry) => selection[entry.id]).length} / {PICKERS.length} {text('selected')}</strong></div>
-                <label className="sort-field builder-sort"><span>{text('sort')}</span><select value={builderSort} onChange={(event) => setBuilderSort(event.target.value)}>{[['name-asc', text('nameAsc')], ['name-desc', text('nameDesc')], ['price-asc', text('priceLow')], ['price-desc', text('priceHigh')]].map(([value, label]) => <option key={value} value={value}>{label}</option>)}</select></label>
-                {PICKERS.map((entry, index) => (
-                  <button className="picker-row" key={entry.id} type="button" onClick={() => { setPicker(entry.id); setPickerSearch('') }}>
-                    <span className="picker-index">{String(index + 1).padStart(2, '0')}</span>
-                    <span className="picker-icon">{selection[entry.id] ? <IconImage item={selection[entry.id]} category={entry.key} /> : entry.icon}</span>
-                    <span className="picker-text"><small>{text(PICKER_LABELS[entry.id])}</small><b>{selection[entry.id]?.displayName || `${text('choose')} ${text(PICKER_LABELS[entry.id])}`}</b></span>
-                    <span className="picker-plus">{selection[entry.id] ? '↗' : '+'}</span>
-                  </button>
-                ))}
+                <div className="builder-picker-grid">
+                  {PICKERS.map((entry, index) => (
+                    <button className="picker-row" key={entry.id} type="button" onClick={() => { setPicker(entry.id); setPickerSearch('') }}>
+                      <span className="picker-index">{String(index + 1).padStart(2, '0')}</span>
+                      <span className="picker-icon">{selection[entry.id] ? <IconImage item={selection[entry.id]} category={entry.key} /> : entry.icon}</span>
+                      <span className="picker-text"><small>{text(PICKER_LABELS[entry.id])}</small><b>{selection[entry.id]?.displayName || `${text('choose')} ${text(PICKER_LABELS[entry.id])}`}</b></span>
+                      <span className="picker-plus">{selection[entry.id] ? '↗' : '+'}</span>
+                    </button>
+                  ))}
+                </div>
               </section>
               <section className="loadout-preview">
                 <div className="builder-panel-heading"><span>{text('yourLoadout')}</span><span className="preview-live"><i /> {text('preview')}</span></div>
@@ -664,7 +685,6 @@ function App() {
                   })}
                 </div>
                 <button className="primary-button save-button" type="button" onClick={saveLoadout}>{text('saveLoadout')} <span>↗</span></button>
-                <p className="save-status" role="status">{savedMessage}</p>
               </section>
             </div>
           ) : null}
@@ -715,6 +735,16 @@ function App() {
                   <h3>{text('skinsInPopup')}</h3>
                   <span>{detailWeaponSkins.length}</span>
                 </div>
+                <label className="search-field weapon-skin-search">
+                  <span>⌕</span>
+                  <input
+                    type="search"
+                    aria-label={text('searchSkins')}
+                    value={weaponSkinSearch}
+                    onChange={(event) => setWeaponSkinSearch(event.target.value)}
+                    placeholder={text('searchSkins')}
+                  />
+                </label>
                 {activeSkinPreview ? (
                   <div className="weapon-skin-preview">
                     <IconImage item={activeSkinPreview} category="skin" />
@@ -735,6 +765,7 @@ function App() {
                     </button>
                   ))}
                 </div>
+                {!detailWeaponSkins.length && weaponSkinSearch.trim() ? <p className="no-weapon-skins">{text('noItems')}</p> : null}
                 {detailWeaponSkins.length > 1 ? <p className="skin-selection-hint">{text('selectSkin')}</p> : null}
               </section>
             ) : null}
@@ -747,7 +778,10 @@ function App() {
         <div className="modal-backdrop" role="presentation" onMouseDown={(event) => { if (event.target === event.currentTarget) setPicker('') }}>
           <section className="picker-modal" role="dialog" aria-modal="true" aria-labelledby="picker-title">
             <div className="picker-modal-head"><div><span className="eyebrow"><span className="eyebrow-line" /> {text('navLoadout')}</span><h2 id="picker-title">{text('choose')} {text(PICKER_LABELS[pickerConfig.id]).toLowerCase()}.</h2></div><button className="modal-close" type="button" aria-label={text('closePicker')} onClick={() => setPicker('')}>×</button></div>
-            <label className="search-field picker-search"><span>⌕</span><input autoFocus type="search" value={pickerSearch} onChange={(event) => setPickerSearch(event.target.value)} placeholder={`${text('choose')} ${text(PICKER_LABELS[pickerConfig.id]).toLowerCase()}…`} /></label>
+            <div className="picker-toolbar">
+              <label className="search-field picker-search"><span>⌕</span><input autoFocus type="search" aria-label={text('searchPicker')} value={pickerSearch} onChange={(event) => setPickerSearch(event.target.value)} placeholder={text('searchPicker')} /></label>
+              <label className="sort-field picker-sort"><span>{text('sort')}</span><select value={builderSort} onChange={(event) => setBuilderSort(event.target.value)}>{[['name-asc', text('nameAsc')], ['name-desc', text('nameDesc')], ['price-asc', text('priceLow')], ['price-desc', text('priceHigh')]].map(([value, label]) => <option key={value} value={value}>{label}</option>)}</select></label>
+            </div>
             {pickerConfig.id === 'melee' ? (
               <div className="melee-picker-content">
                 <section>
@@ -774,6 +808,13 @@ function App() {
               </>
             )}
           </section>
+        </div>
+      ) : null}
+      {saveFeedback ? (
+        <div className={`save-toast save-toast-${saveFeedback.type}`} role={saveFeedback.type === 'error' ? 'alert' : 'status'} aria-live={saveFeedback.type === 'error' ? 'assertive' : 'polite'}>
+          <span className="save-toast-icon" aria-hidden="true">{saveFeedback.type === 'success' ? '✓' : '!'}</span>
+          <p>{saveFeedback.message}</p>
+          <button type="button" aria-label={text('dismiss')} onClick={() => setSaveFeedback(null)}>×</button>
         </div>
       ) : null}
     </div>

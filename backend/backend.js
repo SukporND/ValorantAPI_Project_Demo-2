@@ -16,7 +16,7 @@ const defaultFrontendDirectory = path.resolve(
   "..",
   "public"
 );
-
+// Proxy, allowlist, and cache requests to the Valorant API
 function createApiApp({
   apiClient = axios,
   apiBase = VALORANT_API_BASE,

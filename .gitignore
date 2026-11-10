@@ -7,5 +7,6 @@ public/
 !.env.example
 .vercel/
 *.log
+/PRESENTATION-SCRIPT.md
 .DS_Store
 Thumbs.db

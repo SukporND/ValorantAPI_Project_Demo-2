@@ -11,7 +11,7 @@ async function startTestServer(app) {
     baseUrl: `http://127.0.0.1:${server.address().port}`,
   };
 }
-
+// เทส
 test("API proxy validates resources and caches successful responses", async (context) => {
   let upstreamCalls = 0;
   const app = createApp({
